@@ -1,6 +1,11 @@
 # pyjr
 minimal python javascript react app
 
+# install:
+
+* Flask==0.10.1
+* gunicorn==19.3.0
+
 # run server:
 
 ```
