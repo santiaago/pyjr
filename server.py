@@ -33,3 +33,13 @@ def static_proxy(path):
         return send_from_directory(os.path.join(root_dir, 'app', 'build', 'static'), path)
     except Exception, e:
         print 'static_proxy: something something went wrong {}'.format(e)
+
+@app.route('/api/players', methods=['GET'])
+def players():
+    print '/api/players requested'
+    players =  [
+        {'name': 'player1'},
+        {'name': 'player2'},
+        {'name': 'player2'}
+    ]
+    return jsonify(players = players)
